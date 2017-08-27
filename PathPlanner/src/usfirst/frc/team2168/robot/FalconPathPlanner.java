@@ -731,23 +731,33 @@ public class FalconPathPlanner
 			path.poofExample();
 
 			//253
-			System.out.println(path.smoothCenterVelocity.length);
-			System.out.println("Beginning center velocity log...");
+			
+			System.out.println("\nBeginning center velocity log...\n");
+//			System.out.println("\n" + path.smoothCenterVelocity.length);
 			for(int i = 0; i < path.smoothCenterVelocity.length; i++){
-				System.out.println("Time: " + path.smoothCenterVelocity[i][0] + "Velocity: ");
-			/*  It seems that this currently outputs the velocity data
-				from Figure 1. When the second value is 0 it appears to 
-				output the time in seconds as the graph progresses. When
-				the second value is 1 it appears to output the velocity,
-				though I've yet to compare the actual values to confirm
-				it.
-			*/
+				System.out.println("Time: " + path.smoothCenterVelocity[i][0]);
+				System.out.println("\tVelocity: " + path.smoothCenterVelocity[i][1]);
 			}
 			
-			System.out.println("Center velocity log complete!");
+			System.out.println("\nCenter velocity log complete!\n");
+
+			System.out.println("\nBeginning left velocity log...\n");
+
+			for(int i = 0; i < path.smoothLeftVelocity.length; i++){
+				System.out.println("Time: " + path.smoothLeftVelocity[i][0]);
+				System.out.println("\tVelocity: " + path.smoothLeftVelocity[i][1]);
+			}
 			
-			System.out.println(path.smoothLeftVelocity[0][0]);
-			System.out.println(path.smoothRightVelocity[0][0]);
+			System.out.println("\nLeft velocity log complete!\n");
+			
+			System.out.println("\nBeginning right velocity log...\n");
+
+			for(int i = 0; i < path.smoothRightVelocity.length; i++){
+				System.out.println("Time: " + path.smoothRightVelocity[i][0]);
+				System.out.println("\tVelocity: " + path.smoothRightVelocity[i][1]);
+			}
+			
+			System.out.println("\nRight velocity log complete!\n");
 //			for(int i=0; i<velocity.length; i++){
 //				System.out.println("i = " + i + "\tvelocity = " + velocity[1][i]);
 //			}
