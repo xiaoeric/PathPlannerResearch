@@ -742,8 +742,12 @@ public class FalconPathPlanner
 			System.out.println("\nBeginning left velocity log...\n");
 
 			for(int i = 0; i < path.smoothLeftVelocity.length; i++){
-				System.out.println("Time: " + path.smoothLeftVelocity[i][0]);
-				System.out.println("\tVelocity: " + path.smoothLeftVelocity[i][1]);
+//				System.out.println("Time: " + path.smoothLeftVelocity[i][0]);
+//				System.out.println("\tVelocity: " + path.smoothLeftVelocity[i][1]);
+				System.out.print("{" + path.smoothLeftVelocity[i][0] + ", " + path.smoothLeftVelocity[i][1] + "}");
+				if(i != path.smoothLeftVelocity.length - 1) {
+					System.out.println(",");
+				}
 			}
 			
 			System.out.println("\nLeft velocity log complete!\n");
@@ -751,8 +755,12 @@ public class FalconPathPlanner
 			System.out.println("\nBeginning right velocity log...\n");
 
 			for(int i = 0; i < path.smoothRightVelocity.length; i++){
-				System.out.println("Time: " + path.smoothRightVelocity[i][0]);
-				System.out.println("\tVelocity: " + path.smoothRightVelocity[i][1]);
+//				System.out.println("Time: " + path.smoothRightVelocity[i][0]);
+//				System.out.println("\tVelocity: " + path.smoothRightVelocity[i][1]);
+				System.out.print("{" + path.smoothRightVelocity[i][0] + ", " + path.smoothRightVelocity[i][1] + "}");
+				if(i != path.smoothRightVelocity.length - 1) {
+					System.out.println(",");
+				}
 			}
 			
 			System.out.println("\nRight velocity log complete!\n");
