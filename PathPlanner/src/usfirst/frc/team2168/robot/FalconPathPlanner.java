@@ -678,13 +678,16 @@ public class FalconPathPlanner
 		long start = System.currentTimeMillis();
 		//System.setProperty("java.awt.headless", "true"); //enable this to true to emulate roboRio environment
 
-
+		double distanceTravel = 15;
+		double distanceOffset = 20;
+		double robotAngle = 25 * (Math.PI/180.0);
+		double offsetAngle = Math.PI/4;
 		//create waypoint path
 		double[][] waypoints = new double[][]{
 				{0, 0},
-				{5, 0},
-				{7, 6},
-				{12, 6}
+				{distanceTravel/4, Math.tan(offsetAngle - robotAngle) * (distanceTravel/4)},
+				{distanceTravel/2, distanceOffset},
+				{distanceTravel, distanceOffset}
 		}; 
 
 		double totalTime = 5; //seconds
